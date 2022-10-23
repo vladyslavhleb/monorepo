@@ -1,0 +1,14 @@
+{
+  "name": "@vladyslavhleb/apps",
+  "private": true,
+  "workspaces": [
+    "packages/**"
+  ],
+  "scripts": {
+    "server:build": "lerna exec --scope '@vladyslavhleb/sample1' --scope '@vladyslavhleb/sample2' -- yarn build",
+    "server:start:dev": "lerna exec  --scope '@vladyslavhleb/sample1' --scope '@vladyslavhleb/sample2' -- yarn start:dev"
+  },
+  "devDependencies": {
+    "lerna": "^6.0.1"
+  }
+}
