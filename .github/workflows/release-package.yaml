@@ -13,7 +13,7 @@ jobs:
       - uses: borales/actions-yarn@v3.0.0
         with:
           cmd: install # will run `yarn install` command
-      - run: yarn build
+      - run: build:server
 
   publish-gpr:
     needs: build
