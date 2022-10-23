@@ -12,8 +12,11 @@ jobs:
           node-version: 16
       - uses: borales/actions-yarn@v3.0.0
         with:
-          cmd: install # will run `yarn install` command
+          cmd: install
       - run: build:server
+      - uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: build:server
 
   publish-gpr:
     needs: build
