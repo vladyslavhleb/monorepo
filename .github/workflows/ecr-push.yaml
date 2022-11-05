@@ -19,11 +19,11 @@ jobs:
           node-version: 16
       - run: echo ${{ secrets.ECR_ENDPOINT_SAMPLE_1 }}
       - uses: docker-practice/actions-setup-docker@master
-      - run: docker build ${{ secrets.$(matrix.images.name) }} ${{ martix.images.path }}
+      - run: docker build ${{ secrets.ECR_ENDPOINT_SAMPLE_1 }} ${{ martix.images.path }}
       - name: Push to ECR
         uses: jwalton/gh-ecr-push@v1
         with:
           access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          image: ${{ secrets.$(matrix.images.name) }}:latest
+          image: ${{ secrets.ECR_ENDPOINT_SAMPLE_1 }}:latest
     
