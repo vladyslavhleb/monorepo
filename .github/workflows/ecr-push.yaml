@@ -19,7 +19,7 @@ jobs:
           node-version: 16
       - run: echo ${{ secrets.ECR_ENDPOINT_SAMPLE_1 }}
       - uses: docker-practice/actions-setup-docker@master
-      - run: docker build ${{ matrix.images.name }} ${{ matrix.images.path }}
+      - run: docker build ${{ secrets[matrix.images.name] }} ${{ matrix.images.path }}
       - name: Push to ECR
         uses: jwalton/gh-ecr-push@v1
         with:
