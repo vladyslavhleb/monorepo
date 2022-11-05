@@ -19,8 +19,5 @@ jobs:
           node-version: 16
       - uses: docker-practice/actions-setup-docker@master
       - run: docker build -t ${{ secrets[matrix.images.name] }} ${{ matrix.images.path }}
-      - name: Build, tag, and push image to Amazon ECR
-        run: |
-          docker build -t ${{ secrets.ECR_ENDPOINT_SAMPLE_1 }}:latest .
-          docker push ${{ secrets.ECR_ENDPOINT_SAMPLE_1 }}:latest
+      - run: docker push ${{ secrets[matrix.images.name] }}:latest
     
