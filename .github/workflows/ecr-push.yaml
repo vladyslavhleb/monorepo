@@ -9,8 +9,8 @@ jobs:
     strategy:
       matrix:
         images: [ 
-          {name: "ECR_ENDPOINT_SAMPLE_1", path: "packages/server/sample1"}, 
-          {name: "ECR_ENDPOINT_SAMPLE_2", path: "packages/server/sample2"}, 
+          {name: "ECR_IMAGE_SAMPLE_1", path: "packages/server/sample1"}, 
+          {name: "ECR_IMAGE_SAMPLE_2", path: "packages/server/sample2"}, 
         ]
     steps:
       - uses: actions/checkout@v3
