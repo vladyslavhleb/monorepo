@@ -116,7 +116,7 @@ resource "github_repository_environment" "gh_environment" {
 resource "github_actions_environment_secret" "gh_secret_ecr_endpoint_sample1" {
   environment     = github_repository_environment.gh_environment.environment
   repository      = var.repository
-  secret_name     = "ECR_ENDPOINT_SAMPLE_1"
+  secret_name     = "ECR_IMAGE_SAMPLE_1"
   plaintext_value = data.aws_ecr_repository.data_ecr_repository_sample_1.repository_url
 }
 
@@ -125,7 +125,7 @@ resource "github_actions_environment_secret" "gh_secret_ecr_endpoint_sample1" {
 resource "github_actions_environment_secret" "gh_secret_ecr_endpoint_sample2" {
   environment     = github_repository_environment.gh_environment.environment
   repository      = var.repository
-  secret_name     = "ECR_ENDPOINT_SAMPLE_2"
+  secret_name     = "ECR_IMAGE_SAMPLE_2"
   plaintext_value = data.aws_ecr_repository.data_ecr_repository_sample_2.repository_url
 }
 
