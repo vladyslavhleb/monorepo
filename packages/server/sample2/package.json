@@ -21,7 +21,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "publishConfig": {
-    "@vladyslavhleb:registry": "https://npm.pkg.github.com"
+    "@vladyslavhleb:registry": "https://npm.pkg.github.com",
+    "access": "restricted"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
