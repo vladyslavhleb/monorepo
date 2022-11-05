@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: echo ${{ secrets.ECR_ENDPOINT_SAMPLE_1 }}
+      - run: echo ${{ secrets.ECR_ENDPOINT_SAMPLE_12 }}
       - uses: docker-practice/actions-setup-docker@master
       - run: docker build ${{ secrets[matrix.images.name] }} ${{ matrix.images.path }}
       - name: Push to ECR
