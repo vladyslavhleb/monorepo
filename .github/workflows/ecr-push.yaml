@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: docker-practice/actions-setup-docker
+      - uses: docker-practice/actions-setup-docker@master
       - run: docker build ${{ secrets.ECR_ENDPOINT_SAMPLE_1 }} packages/server/sample1
       - run: docker build ${{ secrets.ECR_ENDPOINT_SAMPLE_2 }} packages/server/sample2
       - name: Push to ECR sample1
