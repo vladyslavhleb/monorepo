@@ -1,2 +1,3 @@
 node_modules/
 packages/infra/.terraform
+packages/infra/terraform.tfstate.d
